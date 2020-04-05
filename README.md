@@ -1,0 +1,1 @@
+The goal of this project is to make SONOFF GK-200MP2 IP camera completely independent from eWlink servers.

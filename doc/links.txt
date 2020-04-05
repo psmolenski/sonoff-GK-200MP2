@@ -1,0 +1,5 @@
+https://ramgattie.com/posts/2020/001-extracting_firmware_with_just_a_uboot_shell-ewelink_camera/001-extracting_firmware_with_just_a_uboot_shell-ewelink_camera.html
+https://www.ethicalhacker.net/columns/sindermann/hardware-hacking-101-lesson-3-abusing-uart-u-are-root/
+
+Tool for reading hex dumps
+https://linux.die.net/man/1/xxd

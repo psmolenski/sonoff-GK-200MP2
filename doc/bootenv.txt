@@ -1,0 +1,33 @@
+GK7102S # printenv
+[PROCESS_SEPARATORS] printenv
+arm_freq=0x00112032
+baudrate=115200
+bootargs=console=ttySGK0 rootfstype=squashfs root=/dev/mtdblock2 init=/squashfs_init mem=40M phytype=0 mtdparts=gk_flash:0x50000@0(UBOOT),0x160000@0x50000(LINUX),0x340000@0x1B0000(ROOTFS),0x90000@0x500000(USER),0x260000@0x5A0000(APP),8M@0(ALL)
+bootcmd=sf probe 0; sf read 0xc1000000 0x50000 0x160000; bootm 0xc1000000
+bootdelay=1
+bootfile=zImage
+bsbsize=1M
+consoledev=ttySGK0
+ethact=goke
+ethaddr=3C:97:0E:22:E1:14
+fileaddr=C1000000
+filesize=219000
+gatewayip=11.1.5.1
+hostname="gk7102s"
+ipaddr=192.168.200.12
+loadaddr=0xC1000000
+mem=40M
+netdev=eth0
+netmask=255.255.255.0
+nfsserver=11.1.5.19
+phytype=0
+rootfstype=ubi.mtd=3 rootfstype=ubifs root=ubi0:rootfs
+rootpath=/opt/work
+serverip=192.168.200.108
+sfboot=setenv bootargs console=${consoledev},${baudrate} noinitrd mem=${mem} rw ${rootfstype} init=linuxrc ip=${ipaddr}:${serverip}:${gatewayip}:${netmask}:${hostname}:${netdev} mac=${ethaddr} phytype=${phytype};sf probe 0 0;sf read ${loadaddr} ${sfkernel} ${filesize}; bootm
+sfkernel=0x50000
+stderr=serial
+stdin=serial
+stdout=serial
+tftpboot=setenv bootargs root=/dev/nfs nfsroot=${nfsserver}:${rootpath},proto=tcp,nfsvers=3,nolock ip=${ipaddr}:${serverip}:${gatewayip}:${netmask}:${hostname}:${netdev} mac=${ethaddr} phytype=${phytype} console=${consoledev},${baudrate} mem=${mem};tftpboot ${bootfile};bootm
+

@@ -1,0 +1,13 @@
+871x_sta_deauth_ops, ff:ff:ff:ff:ff:ff is deauth, reason=2
+rtl871x_set_key_ops
+rtl871x_set_key_ops
+rtl871x_set_key_ops
+rtl871x_set_key_ops
+Using interface ra0 with hwaddr 30:4a:26:b6:61:6e and ssid 'HAP-EWLK-049689-GDGXC'
+rtl871x_set_wps_assoc_resp_ie
+rtl871x_set_wps_beacon_ie
+rtl871x_set_wps_probe_resp_ie
+rtl871x_set_beacon_ops
+rtl871x_set_hidden_ssid ignore_broadcast_ssid:0, HAP-EWLK-049689-GDGXC,21
+rtl871x_set_acl
+add 30k noise data to init recognizer
